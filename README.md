@@ -1,4 +1,10 @@
-# Ecommerce
+# Here is the live demo <a href="http://delirious-coast.surge.sh/" style="font-size: 40px">CLICK TO SEE DEMO</a>
+
+![alt-text](https://github.com/TheCodersDream/Angular-Ecommerce-App-with-NGRX/blob/master/angular_ecommerce_img_1.png)
+![alt-text](https://github.com/TheCodersDream/Angular-Ecommerce-App-with-NGRX/blob/master/angular_ecommerce_img_2.png)
+![alt-text](https://github.com/TheCodersDream/Angular-Ecommerce-App-with-NGRX/blob/master/angular_ecommerce_img_3.png)
+![alt-text](https://github.com/TheCodersDream/Angular-Ecommerce-App-with-NGRX/blob/master/angular_ecommerce_img_4.png)
+![alt-text](https://github.com/TheCodersDream/Angular-Ecommerce-App-with-NGRX/blob/master/angular_ecommerce_img_5.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
