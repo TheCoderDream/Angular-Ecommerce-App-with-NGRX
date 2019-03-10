@@ -1,0 +1,15 @@
+<div class="card mb-3" *ngIf="brandItemsCount">
+  <div class="card-header">
+    <h3>Brands</h3>
+  </div>
+  <ul class="list-group flex-row flex-wrap">
+    <li class="list-group-item flex-50" *ngFor="let brand of brands">
+      <label class="custom-checkbox text-capitalize"> {{brand}} ({{brandItemsCount[brand]}})
+        <input type="checkbox"
+               [name]="brand"
+               class="custom-checkbox__input" (input)="onChangeSelectBox($event)"/>
+        <span class="custom-checkbox__span"></span>
+      </label>
+    </li>
+  </ul>
+</div>

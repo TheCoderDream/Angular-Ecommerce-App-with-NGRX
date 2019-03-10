@@ -1,0 +1,8 @@
+<div class="owl-dots">
+  <button
+    *ngFor="let i of dots"
+    (click)="changeItem.emit(i)"
+    [class.active]="activeItem === i"
+    class="owl-dot" role="button">
+  </button>
+</div>

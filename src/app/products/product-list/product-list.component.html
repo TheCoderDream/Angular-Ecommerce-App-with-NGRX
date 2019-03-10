@@ -1,0 +1,36 @@
+<ng-container *ngIf="products">
+  <div class="row mb-3">
+    <div class="col-12 d-none d-lg-block d-xl-block">
+      <div class="card  ">
+        <div class="card-header d-flex justify-content-end ">
+          <span class="mr-3">Change Layout: </span>
+          <app-layout-mode [isActive]="gridValue === 3" [len]="3" (changeLayout)="onChangeLayout($event)" style="margin-right: .8rem"></app-layout-mode>
+          <app-layout-mode [isActive]="gridValue === 4" [len]="4" (changeLayout)="onChangeLayout($event)"></app-layout-mode>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div
+      [ngClass]="colValue"
+      class="col-md-6 mb-4" *ngFor="let product of products | pagination: {perPage: perPage, currentPage: currentPage}">
+      <app-product
+        [product]="product"
+      ></app-product>
+    </div>
+
+
+  </div>
+  <div class="d-flex justify-content-end">
+    <app-pagination
+      (prev)="prev($event)"
+      (goPage)="goToPage($event)"
+      (next)="next($event)"
+      [currentPage]="currentPage"
+      [pagesToShow]="pagesToShow"
+      [totalItemsCount]="products.length"
+      [perPage]="perPage"
+    ></app-pagination>
+  </div>
+</ng-container>
+

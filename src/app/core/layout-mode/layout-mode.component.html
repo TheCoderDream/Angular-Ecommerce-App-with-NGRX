@@ -1,0 +1,6 @@
+<div class="layout-mode" (click)="changeLayout.emit(len)">
+  <div
+    [ngClass]="{'layout-mode__item--active': isActive}"
+    *ngFor="let i of items"
+    class="layout-mode__item"></div>
+</div>

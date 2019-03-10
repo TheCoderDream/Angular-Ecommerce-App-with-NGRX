@@ -1,0 +1,17 @@
+<aside >
+  <article class="gallery-wrap">
+    <div class="img-big-wrap">
+      <div style="padding: 2rem" #imageContainer ><a href="#"><img
+      (mousemove)="handleImageChange()"
+      (mouseout)="handleMouseOut()"
+      [src]="currentImage"
+      style="width: 100%; height: 100%"
+      /></a></div>
+    </div>
+    <div class="img-small-wrap">
+      <div
+        *ngFor="let image of images; let i = index"
+        class="item-gallery" (click)="changeImage(i)"><img [src]="image"/></div>
+    </div>
+  </article>
+</aside>

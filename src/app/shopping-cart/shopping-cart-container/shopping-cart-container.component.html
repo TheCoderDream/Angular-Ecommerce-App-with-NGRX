@@ -1,0 +1,24 @@
+<div class="container" style="padding-top: 6rem;" *ngIf="cart">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      <i class="fa fa-shopping-cart pr-2" aria-hidden="true"></i>
+      Shopping cart
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+      <app-shopping-cart-item *ngFor="let cartItem of cart" [product]="cartItem">
+
+      </app-shopping-cart-item>
+      <h2 class="display-4 text-center" *ngIf="cart.length === 0">
+        There is no item in cart
+      </h2>
+    </div>
+    <div class="card-footer">
+      <div class="pull-right" style="margin: 10px">
+        <div class="pull-right" style="margin: 5px">
+          Total price: <b>{{totalPrice | priceFormatter}}$</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
